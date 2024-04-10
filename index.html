@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="index.js" defer></script>
+    <link
+      href="fonts/Euclid Circular B/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=5f8e61dd-f0b8-4514-9cdb-af6909444a15&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="header__container">
+          <div class="header__logo">
+            <img src="./images/logo_circle.svg" alt="" />
+            <h3>ГРОСС МАРКЕТ</h3>
+          </div>
+          <div class="header__connection">
+            <a href="tel:+7 (8142) 33 22 11">+7 (926) 433-14-16</a>
+            <button>заполнить анкету</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="greetings">
+      <div class="container">
+        <div class="swiper">
+          <div class="swiper__nav">
+            <h1>
+              У тебя <br />
+              к этому талант
+            </h1>
+            <div>
+              <div class="swiper__btn">
+                <button><img src="images/nav_left_btn.svg" alt="" /></button>
+                <span></span>
+                <button><img src="images/nav_rigth_btn.svg" alt="" /></button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper__person">
+            <!-- <div class="swiper__"></div> -->
+            <div class="swiper__img"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main>
+      <div class="container">
+        <div class="job">
+          <div class="job__nav">
+            <h2 class="title">вакансии в гросс маркете</h2>
+            <div class="job__btn">
+              <button><img src="./images/nav_left_btn.svg" alt="" /></button>
+              <button><img src="images/nav_rigth_btn.svg" alt="" /></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="cart_job">
+              <button>товаровед</button>
+              <div class="job__profession_tovaroved"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cart_job">
+              <button>водитель</button>
+              <div class="job__profession_voditel"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cart_job">
+              <div class="job__profession_pekar">
+                <button>пекарь</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cart_job">
+              <div class="job__profession_kassir">
+                <button>кассир</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cart_job">
+              <div class="job__profession_prodavec">
+                <button>продавец</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cart_job">
+              <div class="job__profession_povar">
+                <button>повар</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cart_job">
+              <div class="job__profession_priemshik">
+                <button>приёмщик</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <section class="instagram">
+          <h3 class="title">мы в инстаграме</h3>
+          <div class="grid">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            <div class="five"></div>
+          </div>
+          <button>показать ещё</button>
+        </section>
+        <section class="map_yandex">
+          <h2 class="title">география</h2>
+          <div id="map" class="map"></div>
+        </section>
+      </div>
+    </main>
+    <footer>dasdas</footer>
+  </body>
+</html>
