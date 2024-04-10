@@ -28,7 +28,7 @@
         <div class="header__container">
           <div class="header__logo">
             <img src="./images/logo_circle.svg" alt="" />
-            <h3>ГРОСС МАРКЕТ</h3>
+            <h2>ГРОСС МАРКЕТ</h2>
           </div>
           <div class="header__connection">
             <a href="tel:+7 (8142) 33 22 11">+7 (926) 433-14-16</a>
@@ -38,40 +38,81 @@
       </div>
     </header>
     <section class="greetings">
-      <div class="container">
-        <div class="swiper">
-          <div class="swiper__nav">
-            <h1>
-              У тебя <br />
-              к этому талант
-            </h1>
-            <div>
-              <div class="swiper__btn">
-                <button><img src="images/nav_left_btn.svg" alt="" /></button>
-                <span></span>
-                <button><img src="images/nav_rigth_btn.svg" alt="" /></button>
+      <div class="swiperFirst mySwiperFirst">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="container">
+              <div class="swiper">
+                <div class="swiper__nav">
+                  <h1>
+                    У тебя <br />
+                    к этому талант
+                  </h1>
+                  <div>
+                    <div class="swiper__btn">
+                      <button>
+                        <img src="images/nav_left_btn.svg" alt="" />
+                      </button>
+                      <span></span>
+                      <button class="swiper__btn_next">
+                        <img src="images/nav_rigth_btn.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper__person">
+                  <div class="swiper__img"></div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="swiper__person">
-            <!-- <div class="swiper__"></div> -->
-            <div class="swiper__img"></div>
+          <div class="swiper-slide">
+            <div class="container">
+              <div class="swiper">
+                <div class="swiper__nav">
+                  <h1>
+                    У тебя <br />
+                    всё под контролем
+                  </h1>
+                  <div>
+                    <div class="swiper__btn active">
+                      <button>
+                        <img src="images/nav_left_btn.svg" alt="" />
+                      </button>
+                      <span></span>
+                      <button class="swiper__btn_prev">
+                        <img src="images/nav_rigth_btn.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper__person">
+                  <div class="swiper__img"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <main>
-      <div class="container">
-        <div class="job">
-          <div class="job__nav">
-            <h2 class="title">вакансии в гросс маркете</h2>
-            <div class="job__btn">
-              <button><img src="./images/nav_left_btn.svg" alt="" /></button>
-              <button><img src="images/nav_rigth_btn.svg" alt="" /></button>
+      <section>
+        <div class="container">
+          <div class="job">
+            <div class="job__nav">
+              <h2 class="title">вакансии в гросс маркете</h2>
+              <div class="job__btn">
+                <button class="btn__left_slide">
+                  <img src="./images/nav_left_btn.svg" alt="" />
+                </button>
+                <button class="btn__right_slide">
+                  <img src="images/nav_rigth_btn.svg" alt="" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -139,10 +180,36 @@
         </section>
         <section class="map_yandex">
           <h2 class="title">география</h2>
-          <div id="map" class="map"></div>
+          <div id="map" class="map">
+            <div class="map__buttons">
+              <button class="btn__yr">юрлица</button>
+              <button class="btn__fiz">физлица</button>
+              <button class="btn__all">показать всё</button>
+            </div>
+          </div>
         </section>
       </div>
     </main>
-    <footer>dasdas</footer>
+    <footer>
+      <div class="container">
+        <div class="footer__elements">
+          <div class="footer__logo">
+            <img src="./images/logo_circle.svg" alt="" />
+            <h2>ГРОСС МАРКЕТ</h2>
+          </div>
+          <a href="#" class="footer__share">ПОДЕЛИТЬСЯ</a>
+          <div class="footer__icons">
+            <a href=""
+              ><img src="./images/IconFaceBook.svg" alt="FaceBook"
+            /></a>
+            <a href=""><img src="images/IconVk.svg" alt="Vk" /></a>
+          </div>
+        </div>
+        <div class="footer__politics">
+          <p>© Гросс маркет 2020</p>
+          <button>Политика обработки персональных данных</button>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
