@@ -158,3 +158,34 @@ function init() {
   map.controls.remove("rulerControl"); // удаляем контрол правил
   map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
 }
+
+const btnGrid = document.querySelector(".toggle__btn");
+const gridContainer = document.querySelector(".grid");
+let buttonGridState = false;
+const cloneNodeGrid = gridContainer.cloneNode(true);
+const elementsForGrid = `
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+`;
+btnGrid.addEventListener("click", function (e) {
+  if (!buttonGridState) {
+    gridContainer.insertAdjacentHTML("beforeend", elementsForGrid);
+    btnGrid.textContent = "cкрыть";
+    buttonGridState = true;
+  } else {
+    gridContainer.innerHTML = `<div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>`;
+    btnGrid.textContent = "показать ещё";
+    buttonGridState = false;
+  }
+});
