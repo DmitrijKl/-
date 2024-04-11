@@ -23,7 +23,7 @@ var swiperFirst = new Swiper(".mySwiperFirst", {
   },
 });
 
-const categoriesData = [
+const CATIGORIES_DATA = [
   {
     lat: 55.77767065455169,
     lon: 37.58627482997361,
@@ -123,28 +123,28 @@ function init() {
 
   function showCategory(category) {
     map.geoObjects.removeAll();
-    categoriesData
-      .filter((element) => element.category.includes(activeCategory))
-      .forEach((item) => {
-        const placemark = new ymaps.Placemark(
-          [item.lat, item.lon],
-          contentPlaceMark(item.name),
-          iconPlaceMark()
-        );
-        map.geoObjects.add(placemark);
-      });
+    CATIGORIES_DATA.filter((element) =>
+      element.category.includes(activeCategory)
+    ).forEach((item) => {
+      const placemark = new ymaps.Placemark(
+        [item.lat, item.lon],
+        contentPlaceMark(item.name),
+        iconPlaceMark()
+      );
+      map.geoObjects.add(placemark);
+    });
   }
   showCategory(activeCategory);
 
-  yrFace.addEventListener("click", function (e) {
+  yrFace.addEventListener("click", function () {
     activeCategory = "ЮрЛицо";
     showCategory(activeCategory);
   });
-  fizFace.addEventListener("click", function (e) {
+  fizFace.addEventListener("click", function () {
     activeCategory = "ФизЛицо";
     showCategory(activeCategory);
   });
-  allFace.addEventListener("click", function (e) {
+  allFace.addEventListener("click", function () {
     activeCategory = "";
     showCategory(activeCategory);
   });
@@ -163,17 +163,15 @@ const btnGrid = document.querySelector(".toggle__btn");
 const gridContainer = document.querySelector(".grid");
 let buttonGridState = false;
 const cloneNodeGrid = gridContainer.cloneNode(true);
-const elementsForGrid = `
+const elementsForGrid = `<div></div>
 <div></div>
 <div></div>
 <div></div>
 <div></div>
 <div></div>
 <div></div>
-<div></div>
-<div></div>
+<div></div>`;
 
-`;
 btnGrid.addEventListener("click", function (e) {
   if (!buttonGridState) {
     gridContainer.insertAdjacentHTML("beforeend", elementsForGrid);
@@ -188,4 +186,15 @@ btnGrid.addEventListener("click", function (e) {
     btnGrid.textContent = "показать ещё";
     buttonGridState = false;
   }
+});
+
+const btnCloseModal = document.querySelector(".btn__window_close");
+const btnOpenModal = document.querySelector(".modal__politics");
+const divModalWindow = document.querySelector(".popup");
+
+btnCloseModal.addEventListener("click", (event) => {
+  divModalWindow.classList.toggle("active");
+});
+btnOpenModal.addEventListener("click", (event) => {
+  divModalWindow.classList.toggle("active");
 });
