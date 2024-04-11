@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="fonts/Euclid Circular B/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./css/form.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header__container">
+          <div class="header__logo">
+            <img src="./images/logo_circle.svg" alt="" />
+            <h2>ГРОСС МАРКЕТ</h2>
+          </div>
+          <div class="header__connection">
+            <a href="index.html"
+              ><img src="images/FormBackX.svg" alt="Back home"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h1>Работа твоей мечты</h1>
+        <div class="content">
+          <form class="form">
+            <div class="form__field">
+              <label for="job">Вакансия *</label>
+              <select name="job" id="job">
+                <option value="value1">товаровед</option>
+                <option value="value2">водитель</option>
+                <option value="value3">пекарь</option>
+                <option value="value3">кассир</option>
+                <option value="value3">продавец</option>
+                <option value="value3">повар</option>
+                <option value="value3">приемщик</option>
+              </select>
+            </div>
+            <div class="form__field">
+              <label for="fio">ФИО *</label>
+              <input class="input__fio" id="fio" type="text" />
+            </div>
+            <div class="form__fields">
+              <div class="form__column1">
+                <div class="form__date">
+                  <label for="">Дата рождения *</label>
+                  <input type="date" />
+                </div>
+                <div class="form__male">
+                  <div><label for="">Пол</label></div>
+                  <div class="male__container">
+                    <div>
+                      <input type="radio" name="radio" id="radioMan" /><label
+                        for="radioMan"
+                        >мужской</label
+                      >
+                    </div>
+                    <div>
+                      <input name="radio" type="radio" id="radioWomen" /><label
+                        for="radioWomen"
+                        >женский</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__column2">
+                <div class="form__num">
+                  <label for="tel">Контактый телефон *</label>
+                  <input placeholder="+7 (" id="tel" type="tel" />
+                </div>
+                <div class="form__email">
+                  <label for="email">Электронная почта</label>
+                  <input id="email" type="email" />
+                </div>
+              </div>
+            </div>
+            <div class="input__rezyme">
+              <label for="rezyme">Резюме</label>
+              <textarea
+                id="rezyme"
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+            <div class="input__file">
+              <input type="file" />
+            </div>
+            <div class="capcha">
+              <label for="">Капча</label>
+              <div class="capcha__content">
+                <div class="capcha__container">
+                  <div class="capcha__btn">
+                    <button></button>
+                    <p>я не робот</p>
+                  </div>
+                  <img src="images/Капча.png" alt="Капча" />
+                </div>
+                <div class="capcha__opacity">
+                  <p>* поля для обязательного заполнения</p>
+                </div>
+              </div>
+            </div>
+            <div class="confirm">
+              <div class="confirm__img"><button></button></div>
+              <p>
+                я подтверждаю согласие на обработку персональных <br />
+                данных и принимаю условия рассмотрения обращений *
+              </p>
+            </div>
+            <button class="submit">отправить</button>
+          </form>
+          <section class="contacts">
+            <h2>Наша суперцель</h2>
+            <p>— стать любимым магазином для каждой <br />российской семьи.</p>
+            <p>
+              Сотни тысяч наших сотрудников ежедневно <br />работают над её
+              достижением.
+            </p>
+            <p>
+              Мы уверены, что в ближайшие годы <br />
+              достигнем этого и будет здорово,<br />если вместе с тобой.
+            </p>
+            <a href="">+7 (926) 433-14-16</a>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

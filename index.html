@@ -32,7 +32,7 @@
           </div>
           <div class="header__connection">
             <a href="tel:+7 (8142) 33 22 11">+7 (926) 433-14-16</a>
-            <button>заполнить анкету</button>
+            <a href="form.html" class="btn__form">заполнить анкету</a>
           </div>
         </div>
       </div>
@@ -186,6 +186,19 @@
         <section class="map_yandex">
           <h2 class="title">география</h2>
           <div id="map" class="map">
+            <div class="map__zoom">
+              <div id="zoom-in">
+                <button class="zoom__plus">
+                  <img src="images/+.svg" alt="" />
+                </button>
+              </div>
+              <span></span>
+              <div id="zoom-out">
+                <button class="zoom__minus">
+                  <img src="images/-.svg" alt="" />
+                </button>
+              </div>
+            </div>
             <div class="map__buttons">
               <button class="btn__yr">юрлица</button>
               <button class="btn__fiz">физлица</button>
@@ -222,7 +235,7 @@
       <div class="popup__body">
         <div class="popup__content">
           <div class="popup__header">
-            <h3>Обработка данных</h3>
+            <h3 class="popup__title">Обработка данных</h3>
             <button>
               <img
                 class="btn__window_close"
@@ -232,7 +245,7 @@
             </button>
           </div>
           <main class="main__content">
-            <h1>Обработка данных</h1>
+            <h1 class="content__title">Обработка данных</h1>
             <div class="section__content">
               <div class="section__title">
                 1. Что регулирует настоящая политика конфиденциальности
