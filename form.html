@@ -36,7 +36,7 @@
             <div class="form__field">
               <label for="job">Вакансия *</label>
               <select class="select__job" name="job" id="job">
-                <option value="value1">товаровед</option>
+                <option selected value="value1">товаровед</option>
                 <option value="value2">водитель</option>
                 <option value="value3">пекарь</option>
                 <option value="value3">кассир</option>
@@ -52,8 +52,15 @@
             <div class="form__fields">
               <div class="form__column1">
                 <div class="form__date">
-                  <label for="">Дата рождения *</label>
-                  <input type="date" />
+                  <label class="label__date" for="date">Дата рождения *</label>
+                  <input
+                    onfocus="this.type='date'"
+                    onblur="if(this.value==''){this.type='text'}"
+                    placeholder="28.07.2002"
+                    class="input__date"
+                    id="date"
+                    type="text"
+                  />
                 </div>
                 <div class="form__male">
                   <div class="male__inputs">
@@ -88,7 +95,7 @@
               <div class="form__column2">
                 <div class="form__num">
                   <label for="tel">Контактый телефон *</label>
-                  <input placeholder="+7 (" id="tel" type="tel" />
+                  <input id="tel" placeholder="+7(" id="tel" type="tel" />
                 </div>
                 <div class="form__email">
                   <label for="email">Электронная почта</label>
@@ -118,8 +125,15 @@
               <div class="capcha__content">
                 <div class="capcha__container">
                   <div class="capcha__btn">
-                    <button></button>
-                    <p>я не робот</p>
+                    <label class="checkbox__label" for="checkbox"></label>
+                    <input
+                      class="checkbox__input"
+                      type="checkbox"
+                      id="checkbox"
+                    />
+                    <label for="checkbox" class="label__capcha"
+                      >я не робот</label
+                    >
                   </div>
                   <img src="images/Капча.png" alt="Капча" />
                 </div>
@@ -129,11 +143,16 @@
               </div>
             </div>
             <div class="confirm">
-              <div class="confirm__img"><button></button></div>
-              <p>
+              <label class="label__confirm" for="checkboxConfirm"></label>
+              <input
+                type="checkbox"
+                name="checkboxConfirm"
+                id="checkboxConfirm"
+              />
+              <label for="checkboxConfirm">
                 я подтверждаю согласие на обработку персональных <br />
                 данных и принимаю условия рассмотрения обращений *
-              </p>
+              </label>
             </div>
             <button class="submit">отправить</button>
           </form>
