@@ -84,14 +84,44 @@ function inputphone(e, phone) {
   }
 }
 
+document.getElementById("date").onkeydown = function (e) {
+  inputdate(e, document.getElementById("date"));
+};
+function inputdate(e, phone) {
+  function stop(evt) {
+    evt.preventDefault();
+  }
+  let key = e.key,
+    v = phone.value;
+  not = key.replace(/([0-9])/, 1);
+
+  if (not == 1 || "Backspace" === not) {
+    if ("Backspace" != not) {
+      if (v.length === 4) {
+        phone.value = v + ".";
+      }
+      if (v.length === 7) {
+        phone.value = v + ".";
+      }
+      if (v.length === 8) {
+        stop(e);
+      }
+    }
+  } else {
+    stop(e);
+  }
+}
+
 const form = document.getElementById("form");
+const male__inputs = document.querySelector(".male__inputs");
 
 form.addEventListener("submit", sendForm);
 async function sendForm(event) {
   event.preventDefault();
   let error = formValidate(form);
   if (!error) {
-    prompt();
+    const mainBlock = document.getElementById("mainBlock");
+    mainBlock.classList.add("active");
   }
 }
 function formValidate(form) {
@@ -118,6 +148,7 @@ function formValidate(form) {
     }
     if (input.getAttribute("id") === "date") {
       let yearInput = new Date(input.value).getFullYear();
+      console.log(yearNow, yearInput);
       if (input.value.length < 10 || yearNow < yearInput || yearInput < 1960) {
         formAddError(input);
         ++error;
@@ -131,6 +162,7 @@ function formValidate(form) {
       if (document.querySelector('input[name="radio"]:checked')) {
         return;
       } else {
+        male__inputs.classList.add("active");
         formAddError(input);
         ++error;
       }
@@ -165,6 +197,7 @@ function onClickFunction() {
   const checkedRadio = document.querySelector('input[name="radio"]:checked');
   formRemoveError(this);
   if (checkedRadio) {
+    male__inputs.classList.remove("active");
     inputRadio.forEach((element) => formRemoveError(element));
   }
 }
@@ -177,7 +210,9 @@ inputConfirm.onclick = onClickFunction;
 inputCapcha.onclick = onClickFunction;
 inputRadio.onclick = onClickFunction;
 
-selectJob.addEventListener("change", () => {
+selectJob.addEventListener("focus", () => {
   formRemoveError(selectJob);
 });
-inputRadio.forEach((element) => (element.onclick = onClickFunction));
+inputRadio.forEach((element) => {
+  return (element.onclick = onClickFunction);
+});

@@ -28,13 +28,13 @@
         </div>
       </div>
     </header>
-    <main>
+    <main id="mainBlock" class="">
       <div class="container">
         <h1>Работа твоей мечты</h1>
         <div class="content">
           <form class="form" id="form" novalidate>
             <div class="form__field">
-              <label for="job">Вакансия *</label>
+              <label class="label__vacation" for="job">Вакансия *</label>
               <select class="select__job _req" name="job" id="job">
                 <option selected value=""></option>
                 <option value="value1">товаровед</option>
@@ -48,7 +48,7 @@
               <div class="error__job"><p>выберите вакансию</p></div>
             </div>
             <div class="form__field">
-              <label for="fio">ФИО *</label>
+              <label class="label__fio" for="fio">ФИО *</label>
               <input class="input__fio _req" id="fio" type="text" />
               <p class="fio__error">поле не заполнено</p>
             </div>
@@ -58,12 +58,11 @@
                   <label class="label__date" for="date">Дата рождения *</label>
                   <input
                     maxlength="10"
-                    placeholder="2002.07.28"
                     class="input__date _req"
                     id="date"
                     min="1940-01-01"
                     max="2040-01-01"
-                    type="text"
+                    type="date"
                   />
                   <p>поле заполнено не корректно</p>
                 </div>
@@ -94,12 +93,15 @@
                         >
                       </div>
                     </div>
+                    <p class="active">выберите пол</p>
                   </div>
                 </div>
               </div>
               <div class="form__column2">
                 <div class="form__num">
-                  <label for="tel">Контактый телефон *</label>
+                  <label class="label__num" for="tel"
+                    >Контактый телефон *</label
+                  >
                   <input
                     class="tel _req"
                     id="tel"
@@ -110,7 +112,9 @@
                   <p>поле заполнено не до конца</p>
                 </div>
                 <div class="form__email">
-                  <label for="email">Электронная почта</label>
+                  <label class="label__email" for="email"
+                    >Электронная почта</label
+                  >
                   <input class="email _req _email" id="email" type="email" />
                   <p>поле заполнено не корректно</p>
                 </div>
@@ -186,6 +190,7 @@
         </div>
       </div>
     </main>
+    <main id="successfully"></main>
     <footer>
       <div class="container">
         <div class="footer__elements">

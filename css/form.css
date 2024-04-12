@@ -128,7 +128,7 @@ header {
 }
 
 .form__field {
-  margin-bottom: 27px;
+  margin-bottom: 13px;
 }
 .form__field select {
   cursor: pointer;
@@ -152,6 +152,17 @@ header {
   display: inline-block;
   margin-bottom: 12px;
 }
+.form__field .label__vacation::after,
+.form__field .label__fio::after,
+.form__male .male::after,
+.form__date .label__date::after,
+.form__date .label__date::after,
+.form__num .label__num::after,
+.form__email .label__email::after {
+  content: url("../images/ГалкаУспешно.svg");
+  margin-left: 5px;
+}
+
 .block {
   width: 400px;
   height: 300px;
@@ -173,7 +184,7 @@ header {
   margin-bottom: 12px;
 }
 .form__fields {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .form__fields input {
@@ -254,14 +265,23 @@ header {
   display: inline-flex;
   align-items: center;
 }
+select option {
+  font-weight: 400;
+  font-family: "Euclid Circular B";
+}
 
+.form__date {
+  position: relative;
+}
 .form__email,
 .form__num,
 .form__male,
 .form__date {
   width: 100%;
 }
-
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
 .male__container div {
   display: flex;
   gap: 12px;
@@ -273,7 +293,7 @@ header {
 .form__column1 {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   width: 100%;
   gap: 30px;
 }
@@ -586,26 +606,27 @@ footer {
 }
 
 .form__email p {
-  display: none;
+  opacity: 0;
 }
 .form__email._error_podpis p {
-  display: block;
+  opacity: 1;
   font-size: 14px;
   color: #ff6666;
 }
 
 .fio__error {
-  display: none;
+  opacity: 0;
 }
 ._error_podpis .fio__error {
-  display: block;
+  opacity: 1;
   font-size: 14px;
   color: #ff6666;
 }
 .form__num p {
-  display: none;
+  opacity: 0;
 }
 .form__num._error_podpis p {
+  opacity: 1;
   display: block;
   font-size: 14px;
   color: #ff6666;
@@ -616,27 +637,46 @@ footer {
 }
 
 .form__date p {
-  display: none;
+  opacity: 0;
 }
 .form__date._error_podpis p {
-  display: block;
+  opacity: 1;
   color: #ff6666;
 }
 .confirm._error_podpis label {
   color: #ff6666;
 }
+.confirm._error_podpis .label__confirm {
+  opacity: 0.3;
+  background-color: #ff6666;
+}
 .capcha__btn._error_podpis label {
   color: #ff6666;
 }
+.capcha__btn._error_podpis .checkbox__label {
+  opacity: 0.3;
+  background-color: #ff6666;
+}
 
 .form__field._error_podpis .error__job {
-  display: block;
+  opacity: 1;
   color: #ff6666;
 }
 .form__field .error__job {
-  display: none;
+  opacity: 0;
 }
 
-.input__male._error_podpis label {
+/* .input__male._error_podpis label {
   color: #ff6666;
+} */
+.male__inputs p {
+  opacity: 0;
+}
+.male__inputs.active p {
+  opacity: 1;
+  color: #ff6666;
+}
+
+main.active {
+  display: none;
 }
