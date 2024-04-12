@@ -83,3 +83,101 @@ function inputphone(e, phone) {
     stop(e);
   }
 }
+
+const form = document.getElementById("form");
+
+form.addEventListener("submit", sendForm);
+async function sendForm(event) {
+  event.preventDefault();
+  let error = formValidate(form);
+  if (!error) {
+    prompt();
+  }
+}
+function formValidate(form) {
+  let error = 0;
+  let yearNow = new Date().getFullYear();
+  let formReq = document.querySelectorAll("._req");
+  formReq.forEach((element) => {
+    const input = element;
+    formRemoveError(input);
+
+    if (input.classList.contains("_email")) {
+      if (
+        !/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu.test(
+          input.value
+        )
+      ) {
+        formAddError(input);
+        ++error;
+      }
+    }
+    if (input.getAttribute("type") === "tel" && input.value.length < 16) {
+      formAddError(input);
+      ++error;
+    }
+    if (input.getAttribute("id") === "date") {
+      let yearInput = new Date(input.value).getFullYear();
+      if (input.value.length < 10 || yearNow < yearInput || yearInput < 1960) {
+        formAddError(input);
+        ++error;
+      }
+    }
+    if (input.getAttribute("type") === "checkbox" && input.checked === false) {
+      formAddError(input);
+      ++error;
+    }
+    if (input.getAttribute("type") === "radio" && input.checked === false) {
+      if (document.querySelector('input[name="radio"]:checked')) {
+        return;
+      } else {
+        formAddError(input);
+        ++error;
+      }
+    }
+    if (input.value === "") {
+      formAddError(input);
+      ++error;
+    }
+  });
+  return error;
+}
+
+function formAddError(input) {
+  input.classList.add("_error");
+  input.parentElement.classList.add("_error_podpis");
+}
+function formRemoveError(input) {
+  input.classList.remove("_error");
+  input.parentElement.classList.remove("_error_podpis");
+}
+
+const selectJob = document.querySelector(".select__job");
+const inputFio = document.querySelector(".input__fio");
+const inputDate = document.querySelector(".input__date");
+const inputTel = document.querySelector(".tel");
+const inputEmail = document.querySelector(".email");
+const inputConfirm = document.getElementById("checkboxConfirm");
+const inputCapcha = document.getElementById("checkbox");
+const inputRadio = document.querySelectorAll(".options__input");
+
+function onClickFunction() {
+  const checkedRadio = document.querySelector('input[name="radio"]:checked');
+  formRemoveError(this);
+  if (checkedRadio) {
+    inputRadio.forEach((element) => formRemoveError(element));
+  }
+}
+
+inputFio.onclick = onClickFunction;
+inputDate.onclick = onClickFunction;
+inputTel.onclick = onClickFunction;
+inputEmail.onclick = onClickFunction;
+inputConfirm.onclick = onClickFunction;
+inputCapcha.onclick = onClickFunction;
+inputRadio.onclick = onClickFunction;
+
+selectJob.addEventListener("change", () => {
+  formRemoveError(selectJob);
+});
+inputRadio.forEach((element) => (element.onclick = onClickFunction));

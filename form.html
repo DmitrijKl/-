@@ -32,11 +32,12 @@
       <div class="container">
         <h1>Работа твоей мечты</h1>
         <div class="content">
-          <form class="form">
+          <form class="form" id="form" novalidate>
             <div class="form__field">
               <label for="job">Вакансия *</label>
-              <select class="select__job" name="job" id="job">
-                <option selected value="value1">товаровед</option>
+              <select class="select__job _req" name="job" id="job">
+                <option selected value=""></option>
+                <option value="value1">товаровед</option>
                 <option value="value2">водитель</option>
                 <option value="value3">пекарь</option>
                 <option value="value3">кассир</option>
@@ -44,28 +45,32 @@
                 <option value="value3">повар</option>
                 <option value="value3">приемщик</option>
               </select>
+              <div class="error__job"><p>выберите вакансию</p></div>
             </div>
             <div class="form__field">
               <label for="fio">ФИО *</label>
-              <input class="input__fio" id="fio" type="text" />
+              <input class="input__fio _req" id="fio" type="text" />
+              <p class="fio__error">поле не заполнено</p>
             </div>
             <div class="form__fields">
               <div class="form__column1">
                 <div class="form__date">
                   <label class="label__date" for="date">Дата рождения *</label>
                   <input
-                    onfocus="this.type='date'"
-                    onblur="if(this.value==''){this.type='text'}"
-                    placeholder="28.07.2002"
-                    class="input__date"
+                    maxlength="10"
+                    placeholder="2002.07.28"
+                    class="input__date _req"
                     id="date"
+                    min="1940-01-01"
+                    max="2040-01-01"
                     type="text"
                   />
+                  <p>поле заполнено не корректно</p>
                 </div>
                 <div class="form__male">
                   <div class="male__inputs">
                     <div class="male__man">
-                      <label class="male" for="">Пол</label>
+                      <label class="male" for="">Пол *</label>
                     </div>
                     <div class="input__container">
                       <div class="input__male">
@@ -73,14 +78,14 @@
                           type="radio"
                           name="radio"
                           id="radioMan"
-                          class="options__input"
+                          class="options__input _req"
                         /><label class="options__label" for="radioMan"
                           ><span>мужской</span></label
                         >
                       </div>
                       <div class="input__male">
                         <input
-                          class="options__input"
+                          class="options__input _req"
                           name="radio"
                           type="radio"
                           id="radioWomen"
@@ -95,11 +100,19 @@
               <div class="form__column2">
                 <div class="form__num">
                   <label for="tel">Контактый телефон *</label>
-                  <input id="tel" placeholder="+7(" id="tel" type="tel" />
+                  <input
+                    class="tel _req"
+                    id="tel"
+                    placeholder="+7("
+                    id="tel"
+                    type="tel"
+                  />
+                  <p>поле заполнено не до конца</p>
                 </div>
                 <div class="form__email">
                   <label for="email">Электронная почта</label>
-                  <input id="email" type="email" />
+                  <input class="email _req _email" id="email" type="email" />
+                  <p>поле заполнено не корректно</p>
                 </div>
               </div>
             </div>
@@ -127,7 +140,7 @@
                   <div class="capcha__btn">
                     <label class="checkbox__label" for="checkbox"></label>
                     <input
-                      class="checkbox__input"
+                      class="checkbox__input _req"
                       type="checkbox"
                       id="checkbox"
                     />
@@ -148,6 +161,7 @@
                 type="checkbox"
                 name="checkboxConfirm"
                 id="checkboxConfirm"
+                class="_req"
               />
               <label for="checkboxConfirm">
                 я подтверждаю согласие на обработку персональных <br />

@@ -184,7 +184,9 @@ header {
   display: block;
   width: 100%;
 }
-
+.input__date {
+  cursor: pointer;
+}
 .input__container {
   display: flex;
   flex-grow: 1;
@@ -572,4 +574,69 @@ footer {
 }
 .section__content:last-child p {
   padding-bottom: 72px;
+}
+
+.form__email ._error {
+  background-color: #ff6666;
+  opacity: 0.3;
+}
+.input__fio._error {
+  background-color: #ff6666;
+  opacity: 0.3;
+}
+
+.form__email p {
+  display: none;
+}
+.form__email._error_podpis p {
+  display: block;
+  font-size: 14px;
+  color: #ff6666;
+}
+
+.fio__error {
+  display: none;
+}
+._error_podpis .fio__error {
+  display: block;
+  font-size: 14px;
+  color: #ff6666;
+}
+.form__num p {
+  display: none;
+}
+.form__num._error_podpis p {
+  display: block;
+  font-size: 14px;
+  color: #ff6666;
+}
+._error_podpis ._error {
+  background-color: #ff6666;
+  opacity: 0.3;
+}
+
+.form__date p {
+  display: none;
+}
+.form__date._error_podpis p {
+  display: block;
+  color: #ff6666;
+}
+.confirm._error_podpis label {
+  color: #ff6666;
+}
+.capcha__btn._error_podpis label {
+  color: #ff6666;
+}
+
+.form__field._error_podpis .error__job {
+  display: block;
+  color: #ff6666;
+}
+.form__field .error__job {
+  display: none;
+}
+
+.input__male._error_podpis label {
+  color: #ff6666;
 }
