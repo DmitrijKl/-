@@ -1,16 +1,47 @@
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 4,
-  spaceBetween: 30,
+  slidesPerView: "4",
+  spaceBetween: "30px",
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+  breakpoints: {
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    746: {
+      slidesPerView: 2.5,
+      spaceBetween: 30,
+    },
+    800: {
+      slidesPerView: 2.5,
+      spaceBetween: 30,
+    },
+    1012: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1210: {
+      slidesPerView: 3.5,
+      spaceBetween: 30,
+    },
+    1600: {
+      slidesPerView: 3.7,
+      spaceBetween: 30,
+    },
+    1900: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
   },
   navigation: {
     nextEl: ".btn__right_slide",
     prevEl: ".btn__left_slide",
   },
+  speed: 500,
 });
-var swiperFirst = new Swiper(".mySwiperFirst", {
+var swiper = new Swiper(".mySwiperFirst", {
   slidesPerView: 1,
   spaceBetween: 0,
   pagination: {
@@ -21,6 +52,7 @@ var swiperFirst = new Swiper(".mySwiperFirst", {
     nextEl: ".swiper__btn_next",
     prevEl: ".swiper__btn_prev",
   },
+  speed: 700,
 });
 
 const CATIGORIES_DATA = [

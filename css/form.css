@@ -152,13 +152,12 @@ header {
   display: inline-block;
   margin-bottom: 12px;
 }
-.form__field .label__vacation::after,
-.form__field .label__fio::after,
-.form__male .male::after,
-.form__date .label__date::after,
-.form__date .label__date::after,
-.form__num .label__num::after,
-.form__email .label__email::after {
+.form__field .label__vacation.active__label::after,
+.form__field .label__fio.active__label::after,
+.form__male .male.active__label::after,
+.form__date .label__date.active__label::after,
+.form__num .label__num.active__label::after,
+.form__email .label__email.active__email::after {
   content: url("../images/ГалкаУспешно.svg");
   margin-left: 5px;
 }
@@ -264,6 +263,12 @@ header {
 .options__label {
   display: inline-flex;
   align-items: center;
+}
+select,
+.form__fields input,
+.input__rezyme textarea {
+  font-family: "Euclid Circular B";
+  font-weight: 500;
 }
 select option {
   font-weight: 400;
@@ -372,7 +377,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: white;
   margin: 0;
 }
-.checkbox__label.active {
+.checkbox__label.active__label {
   background: url("../images/Confirm.svg") no-repeat center;
   height: 24px;
   width: 24px;
@@ -409,7 +414,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #checkboxConfirm {
   display: none;
 }
-.label__confirm.active {
+.label__confirm.active__label {
   background: url("../images/Confirm.svg") no-repeat center;
   width: 24px;
   height: 24px;
@@ -679,4 +684,83 @@ footer {
 
 main.active {
   display: none;
+}
+
+/* main active #####################################*/
+#successfully {
+  display: none;
+}
+#successfully.active {
+  display: block;
+}
+.successfully .content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content__wait {
+  max-width: 540px;
+}
+.content__wait p {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.border__left {
+  border-left: 3px solid #ffdf31;
+  padding: 0 0 0 12px;
+}
+.border__left p {
+  font-size: 14px;
+}
+
+.content__feebback h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+.content__feebback a {
+  text-align: center;
+  display: block;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  font-size: 24px;
+  color: black;
+  padding: 22px 125px;
+  transition: all 0.3s ease;
+}
+.content__feebback a:hover {
+  transform: scale(1.02);
+}
+.header__logo h2 {
+  font-weight: 500;
+}
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.submit {
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.submit.activ {
+  background-color: #ffdf31;
+}
+.submit.activ:hover {
+  transform: scale(1.02);
+}
+.popup.active .popup__body {
+  animation: popup 1s;
+}
+@keyframes popup {
+  from {
+    /* transform: translateY(-50px); */
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
 }

@@ -28,7 +28,7 @@
         </div>
       </div>
     </header>
-    <main id="mainBlock" class="">
+    <main id="mainBlock">
       <div class="container">
         <h1>Работа твоей мечты</h1>
         <div class="content">
@@ -40,22 +40,24 @@
                 <option value="value1">товаровед</option>
                 <option value="value2">водитель</option>
                 <option value="value3">пекарь</option>
-                <option value="value3">кассир</option>
-                <option value="value3">продавец</option>
-                <option value="value3">повар</option>
-                <option value="value3">приемщик</option>
+                <option value="value4">кассир</option>
+                <option value="value5">продавец</option>
+                <option value="value6">повар</option>
+                <option value="value7">приемщик</option>
               </select>
               <div class="error__job"><p>выберите вакансию</p></div>
             </div>
             <div class="form__field">
               <label class="label__fio" for="fio">ФИО *</label>
               <input class="input__fio _req" id="fio" type="text" />
-              <p class="fio__error">поле не заполнено</p>
+              <p class="fio__error">поле заполнено не до конца</p>
             </div>
             <div class="form__fields">
               <div class="form__column1">
                 <div class="form__date">
-                  <label class="label__date" for="date">Дата рождения *</label>
+                  <label id="labelDate" class="label__date" for="date"
+                    >Дата рождения *</label
+                  >
                   <input
                     maxlength="10"
                     class="input__date _req"
@@ -190,8 +192,32 @@
         </div>
       </div>
     </main>
-    <main id="successfully"></main>
-    <footer>
+    <main id="successfully">
+      <div class="container">
+        <h1>Ждем тебя!</h1>
+        <div class="content">
+          <section class="content__wait">
+            <p>
+              В 2020 году самыми востребованными умениями и качествами на рынке
+              труда станут:
+            </p>
+            <div class="border__left">
+              <p class="small__text">
+                Умение ставить цели, планировать свое время, инициативность,
+                настойчивость, высокая мотивация, умение эффективно общаться,
+                любознательность.
+              </p>
+            </div>
+            <p>А профессиональным навыкам можно научить любого человека.</p>
+          </section>
+          <section class="content__feebback">
+            <h2>Остались вопросы?</h2>
+            <a href="tel:1234567890">+7 (926) 433-14-16</a>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
       <div class="container">
         <div class="footer__elements">
           <div class="footer__logo">
