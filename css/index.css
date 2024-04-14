@@ -86,6 +86,9 @@ header {
 .container__map {
   margin: 0 165px;
 }
+.header__phone {
+  display: none;
+}
 .header__logo {
   display: flex;
   align-items: center;
@@ -220,6 +223,9 @@ img {
   transform: scale(-1, 1);
   border-radius: 25px;
 }
+.perenosTitle {
+  display: none;
+}
 .greetings__name {
   z-index: 10;
   font-size: 24px;
@@ -233,12 +239,12 @@ img {
   border-radius: 25px;
 }
 .greetings__name.woman {
-  transform: scale(0.9, 0.7);
-  top: 110px;
-  left: 140px;
+  transform: scale(0.8, 0.65);
+  top: 100px;
+  left: 180px;
 }
 .greetings__proffesion.woman {
-  transform: scale(0.8, 0.7);
+  transform: scale(0.8, 0.65);
   top: 280px;
   left: 250px;
 }
@@ -252,11 +258,11 @@ img {
 .swiper__img.women {
   height: 100%;
   width: 100%;
-  background: url("../images/ДевушкаПродавец.png") center no-repeat;
-  background-position-x: -65px;
-  background-position-y: -5px;
-  background-size: cover;
-  transform: scale(1.4, 1);
+  background: url("../images/ДевушкаПродавец.png") left no-repeat;
+  background-position-x: -50px;
+  background-position-y: 40px;
+  background-size: 100%;
+  transform: scale(1.3, 1);
 }
 
 .cart_job {
@@ -270,49 +276,54 @@ img {
   background: url("../images/personJob/Товаровед.png") no-repeat;
   background-size: cover;
   background-position: bottom;
-  height: 100%;
+  height: 85%;
   width: 100%;
 }
 .job__profession_voditel {
   background: url("../images/personJob/Водитель.png") no-repeat;
   background-size: cover;
   background-position: bottom;
-  height: 100%;
+  height: 85%;
   width: 100%;
+
+  transform: scale(1);
 }
 .job__profession_pekar {
   background: url("../images/personJob/пекарь.png") no-repeat;
-  background-size: auto;
-  background-position: bottom;
-  height: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 85%;
   width: 100%;
 }
 .job__profession_kassir {
   background: url("../images/personJob/кассир.png") no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-position: bottom;
-  height: 100%;
+  /* background-position-y: 20px; */
+  height: 92%;
   width: 100%;
+  transform: scale(1);
 }
 .job__profession_prodavec {
   background: url("../images/personJob/продавец.png") no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-position: bottom;
-  height: 100%;
+  height: 86%;
   width: 100%;
+  transform: scale(0.95);
 }
 .job__profession_povar {
   background: url("../images/personJob/повар.png") no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-position: bottom;
-  height: 100%;
+  height: 85%;
   width: 100%;
 }
 .job__profession_priemshik {
   background: url("../images/personJob/приемщик.png") no-repeat;
-  background-size: bottom;
+  background-size: cover;
   background-position: bottom;
-  height: 105%;
+  height: 85%;
   width: 100%;
 }
 
@@ -327,6 +338,7 @@ img {
 
 .job h2 {
   font-size: 32px;
+  font-weight: 500;
 }
 
 .job__nav {
@@ -511,17 +523,18 @@ footer {
 .footer__politics {
   padding: 24px 0 32px 0;
   display: flex;
-  gap: 487px;
   font-size: 14px;
 }
 .footer__politics p {
   font-weight: 500;
+  margin-right: 160px;
 }
 .footer__politics button {
   background-color: #f5f5f5;
   font-size: 14px;
   font-weight: 500;
   transition: all 0.2s ease-out;
+  margin: 0 auto;
 }
 
 .footer__politics button:hover {
@@ -560,7 +573,6 @@ footer {
 }
 @keyframes popup {
   from {
-    /* transform: translateY(-50px); */
     transform: scale(0.9);
   }
   to {
@@ -656,61 +668,26 @@ footer {
     margin-right: 160px;
   }
 }
+@media (max-width: 1195px) {
+  .popup__body {
+    padding: 72px 40px;
+  }
+  .greetings__name.woman {
+    transform: scale(0.8, 0.65);
+    top: 100px;
+    left: 140px;
+  }
+  .greetings__proffesion.woman {
+    transform: scale(0.8, 0.65);
+    top: 280px;
+    left: 170px;
+  }
+}
 @media (max-width: 1100px) {
   .cart_job {
     max-width: 300px;
     height: 410px;
   }
-  .job__profession_tovaroved {
-    background: url("../images/personJob/Товаровед.png") no-repeat;
-    background-size: auto;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-  }
-  .job__profession_voditel {
-    background: url("../images/personJob/Водитель.png") no-repeat;
-    background-size: auto;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-  }
-  .job__profession_pekar {
-    background: url("../images/personJob/пекарь.png") no-repeat;
-    background-size: 100%;
-    background-position: center;
-    height: 120%;
-    width: 100%;
-  }
-  .job__profession_kassir {
-    background: url("../images/personJob/кассир.png") no-repeat;
-    background-size: 85%;
-    background-position: bottom;
-    height: 100%;
-    width: 100%;
-  }
-  .job__profession_prodavec {
-    background: url("../images/personJob/продавец.png") no-repeat;
-    background-size: 90%;
-    background-position: bottom;
-    height: 100%;
-    width: 100%;
-  }
-  .job__profession_povar {
-    background: url("../images/personJob/повар.png") no-repeat;
-    background-size: 95%;
-    background-position: bottom;
-    height: 100%;
-    width: 100%;
-  }
-  .job__profession_priemshik {
-    background: url("../images/personJob/приемщик.png") no-repeat;
-    background-size: 95%;
-    background-position: bottom;
-    height: 100%;
-    width: 100%;
-  }
-
   .container {
     margin: 0 39px;
   }
@@ -733,9 +710,7 @@ footer {
   .map_yandex {
     margin-bottom: 0;
   }
-  .footer__politics {
-    gap: 350px;
-  }
+
   .greetings .container {
     margin: 0 39px;
   }
@@ -745,8 +720,33 @@ footer {
 }
 
 @media (max-width: 1016px) {
+  .popup__header.active {
+    padding: 32px 24px;
+  }
+  .main__content h1 {
+    margin-top: -22px;
+  }
+  .main__content {
+    margin: 0 24px;
+  }
   .greetings .container {
     margin: 0 0 0 39px;
+  }
+  .greetings .woman__title {
+    font-size: 60px;
+  }
+  .swiper__nav.woman {
+    margin: 66px 0;
+  }
+  .greetings__name.woman {
+    transform: scale(0.8, 0.65);
+    top: 80px;
+    left: 170px;
+  }
+  .greetings__proffesion.woman {
+    transform: scale(0.8, 0.65);
+    top: 260px;
+    left: 160px;
   }
   .swiper__nav {
     gap: 30px;
@@ -756,42 +756,27 @@ footer {
   }
   .grid {
     display: grid;
-
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 330px 210px;
-    grid-auto-rows: 210px;
-    /* grid-auto-columns: 1fr 1fr 1fr; */
     gap: 30px;
+    grid-template-rows: 330px;
+    grid-auto-rows: 210px;
+    grid-template-columns: repeat(6, 1fr);
     grid-auto-flow: row;
+    /* grid-auto-columns: 1fr 1fr 1fr; */
     margin-bottom: 30px;
   }
-  .grid div {
-    border-radius: 8px;
-    background-color: #f5f5f5;
-  }
-
   .grid div:first-child {
-    grid-column: 1 / 2;
+    grid-column: span 3;
     grid-row: 1 / 2;
   }
-  .grid div.one {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
+  .grid div:first-child + div {
+    grid-column: span 3;
   }
-  .grid div.two {
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
+  .grid div {
+    grid-column: span 2;
   }
 }
 
 @media (max-width: 890px) {
-  .job__profession_pekar {
-    background: url("../images/personJob/пекарь.png") no-repeat;
-    background-size: 110%;
-    background-position: bottom;
-    height: 100%;
-    width: 100%;
-  }
   .greetings__proffesion {
     left: 120px;
     top: 50px;
@@ -812,7 +797,7 @@ footer {
     width: 100%;
     background: url("../images/ДевушкаПродавец.png") center no-repeat;
     background-position-x: -125px;
-    background-position-y: -5px;
+    background-position-y: 40px;
     background-size: cover;
     transform: scale(1.4, 1);
   }
@@ -835,6 +820,7 @@ footer {
     overflow: hidden;
     box-sizing: border-box;
     position: absolute;
+
     top: 0;
     right: -100px;
   }
@@ -843,5 +829,267 @@ footer {
   }
   .swiper__nav.woman {
     margin: 66px 0;
+  }
+}
+
+@media (max-width: 765px) {
+  .job__btn {
+    display: none;
+  }
+  .greetings .swiper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .swiper__nav {
+    gap: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .greetings h1 {
+    max-width: 100%;
+    width: 100%;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 48px;
+    z-index: 20;
+    overflow: hidden;
+    margin-bottom: 48px;
+  }
+  .greetings h1 br {
+    display: none;
+  }
+  .greetings .container {
+    margin: 0;
+  }
+  .swiper__btn {
+    display: none;
+  }
+  .swiper__nav.woman {
+    margin: 0;
+  }
+  .greetings .woman__title {
+    z-index: 20;
+    overflow: hidden;
+    font-size: 48px;
+    background-color: #f5f5f5;
+  }
+  .swiper__nav.woman {
+    background-color: #f5f5f5;
+  }
+  .swiper__nav {
+    background-color: #f5f5f5;
+    z-index: 101;
+    overflow: hidden;
+  }
+  .swiper__person {
+    width: 100%;
+    height: 426px;
+    position: static;
+    border-radius: 50% 50% 0 0;
+    transform: none;
+    align-self: stretch;
+    transform: scale(1, 1);
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 20;
+    display: block;
+    align-self: flex-end;
+  }
+  .swiper__img {
+    height: 100%;
+    width: 100%;
+    background: url("../images/Пекарь.png") center no-repeat;
+    background-size: cover;
+    transform: scale(-1, 1);
+  }
+  .swiper__img.women {
+    height: 110%;
+    width: 100%;
+    background: url("../images/ДевушкаПродавец.png") center no-repeat;
+    /* background-position-x: 50px; */
+    /* background-position-y: 0; */
+    background-size: cover;
+    transform: scale(1, 1);
+    z-index: 1;
+  }
+  .greetings__name.woman {
+    transform: scale(1, 1);
+    top: 100px;
+    left: 180px;
+  }
+  .greetings__proffesion.woman {
+    transform: scale(1, 1);
+    top: 340px;
+    left: 50px;
+  }
+  .swiper__img.women {
+    overflow: hidden;
+  }
+  .swiper__nav.woman {
+    overflow: hidden;
+    z-index: 21;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer__politics {
+    flex-direction: column-reverse;
+    gap: 24px;
+  }
+  .footer__politics button {
+    text-align: left;
+    margin: 0;
+  }
+  .header__phone {
+    display: block;
+  }
+  .header__connection {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .popup__header.active {
+    padding: 21px 32px 21px 14px;
+  }
+  .popup__body {
+    padding: 0;
+  }
+  .main__content h1 {
+    margin-top: 5px;
+    margin-bottom: 32px;
+    font-size: 48px;
+  }
+  .main__content {
+    margin: 0 14px;
+  }
+  .popup__content {
+    border-radius: 0;
+  }
+  .section__content {
+    margin-bottom: 0;
+  }
+  .section__content:last-child p {
+    padding-bottom: 30px;
+  }
+  .popup__title.active {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 48px 0 0 0;
+  }
+  .greetings h1 .perenosTitle {
+    display: block;
+  }
+  .greetings .woman__title {
+    display: block;
+    margin-left: 14px;
+    text-align: left;
+  }
+  .greetings h1 {
+    display: block;
+    margin-left: 14px;
+    text-align: left;
+  }
+
+  .container__map h2 {
+    margin-left: 14px;
+  }
+
+  .cart_job {
+    max-width: 252px;
+    height: 344px;
+  }
+  .container {
+    margin: 0 14px;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .grid div {
+    width: 100%;
+    height: 346px;
+  }
+}
+@media (max-width: 505px) {
+  footer .container {
+    margin: 0;
+  }
+  .footer__elements {
+    padding: 24px 14px;
+  }
+  .footer__politics {
+    margin-left: 15px;
+  }
+  .footer__elements .footer__share {
+    display: none;
+  }
+}
+@media (max-width: 427px) {
+  .greetings__name.woman {
+    transform: scale(0.7, 1);
+    top: 100px;
+    left: 40px;
+  }
+  .greetings__proffesion.woman {
+    transform: scale(0.7, 1);
+    top: 340px;
+    left: -70px;
+  }
+  .greetings__name {
+    top: 300px;
+    left: 60px;
+  }
+  .greetings__proffesion {
+    top: 50px;
+    left: 120px;
+  }
+  .cart_job {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 505px) {
+  footer .container {
+    margin: 0;
+  }
+  .footer__elements {
+    padding: 24px 14px;
+  }
+  .footer__politics {
+    margin-left: 15px;
+  }
+  .footer__elements .footer__share {
+    display: none;
+  }
+}
+@media (max-width: 427px) {
+  .greetings__name.woman {
+    transform: scale(0.7, 1);
+    top: 100px;
+    left: 40px;
+  }
+  .greetings__proffesion.woman {
+    transform: scale(0.7, 1);
+    top: 340px;
+    left: -70px;
+  }
+  .greetings__name {
+    top: 300px;
+    left: 60px;
+  }
+  .greetings__proffesion {
+    top: 50px;
+    left: 120px;
+  }
+  /* .cart_job {
+    margin: 0 auto;
+  } */
+}
+@media (max-width: 400px) {
+  main .mySwiper {
+    margin: 0;
   }
 }

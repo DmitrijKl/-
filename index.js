@@ -1,12 +1,43 @@
+// Свайпер с двумя слайдами
+var swiper = new Swiper(".mySwiperFirst", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper__btn_next",
+    prevEl: ".swiper__btn_prev",
+  },
+  speed: 700,
+});
+
+//Свайпер с вакансиями
+
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: "4",
   spaceBetween: "30px",
+  // centeredSlides: true,
+
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
   breakpoints: {
+    0: {
+      slidesPerView: 1.2,
+      spaceBetween: 0,
+    },
+    400: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
     600: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    731: {
       slidesPerView: 2,
       spaceBetween: 30,
     },
@@ -40,19 +71,6 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".btn__left_slide",
   },
   speed: 500,
-});
-var swiper = new Swiper(".mySwiperFirst", {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper__btn_next",
-    prevEl: ".swiper__btn_prev",
-  },
-  speed: 700,
 });
 
 const CATIGORIES_DATA = [
@@ -204,14 +222,36 @@ const btnGrid = document.querySelector(".toggle__btn");
 const gridContainer = document.querySelector(".grid");
 let buttonGridState = false;
 const cloneNodeGrid = gridContainer.cloneNode(true);
-const elementsForGrid = `<div></div>
-<div></div>
-<div></div>
+let elementsForGrid;
+
+const mediaQueryMaxWidth = window.matchMedia("(max-width: 1016px)");
+const mediaQueryMinWidth = window.matchMedia("(min-width: 1016px)");
+function handleTabletChange(e) {
+  if (e.matches) {
+    elementsForGrid = `<div></div>
 <div></div>
 <div></div>
 <div></div>
 <div></div>
 <div></div>`;
+  }
+}
+function handleTabletChangeMinWidth(e) {
+  if (e.matches) {
+    elementsForGrid = `<div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>`;
+  }
+}
+mediaQueryMaxWidth.addListener(handleTabletChange);
+handleTabletChange(mediaQueryMaxWidth);
+mediaQueryMinWidth.addListener(handleTabletChangeMinWidth);
+handleTabletChangeMinWidth(mediaQueryMinWidth);
 
 btnGrid.addEventListener("click", function (e) {
   if (!buttonGridState) {
