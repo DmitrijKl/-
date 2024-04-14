@@ -950,6 +950,18 @@ footer {
   }
 }
 @media (max-width: 600px) {
+  .instagram {
+    margin-bottom: 48px;
+  }
+  header {
+    padding: 24px 0;
+  }
+  .greetings {
+    margin-bottom: 48px;
+  }
+  main .mySwiper {
+    margin-left: 14px;
+  }
   .popup__header.active {
     padding: 21px 32px 21px 14px;
   }
@@ -1015,6 +1027,9 @@ footer {
   }
 }
 @media (max-width: 505px) {
+  .footer__elements {
+    border-radius: 0;
+  }
   footer .container {
     margin: 0;
   }
@@ -1029,6 +1044,9 @@ footer {
   }
 }
 @media (max-width: 427px) {
+  .swiper-wrapper {
+    margin-bottom: 48px;
+  }
   .greetings__name.woman {
     transform: scale(0.7, 1);
     top: 100px;
@@ -1084,12 +1102,18 @@ footer {
     top: 50px;
     left: 120px;
   }
-  /* .cart_job {
-    margin: 0 auto;
-  } */
+  .cart_job {
+    margin: 0 0;
+  }
 }
 @media (max-width: 400px) {
+  .swiper {
+  }
   main .mySwiper {
     margin: 0;
+  }
+  .swiper-slide {
+    /* display: flex; */
+    /* justify-content: center; */
   }
 }

@@ -144,7 +144,6 @@ header {
   position: relative;
   appearance: none;
   background: url("../images/SelectionStrelka.svg") no-repeat right;
-  background-position-x: 500px;
 }
 
 .form__field label {
@@ -161,7 +160,9 @@ header {
   content: url("../images/ГалкаУспешно.svg");
   margin-left: 5px;
 }
-
+select {
+  color: grey;
+}
 .block {
   width: 400px;
   height: 300px;
@@ -808,5 +809,39 @@ main.active {
   }
   .popup__title.active {
     font-size: 20px;
+  }
+}
+@media (max-width: 1445px) {
+  .container {
+    margin: 0 60px;
+  }
+}
+@media (max-width: 1235px) {
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 72px;
+  }
+  .submit {
+    margin-bottom: 0;
+  }
+  .form {
+    max-width: 100%;
+    width: 100%;
+  }
+  section.contacts {
+    width: 100%;
+    margin-bottom: 72px;
+  }
+  .contacts br {
+    display: none;
+  }
+  .contacts a {
+    text-align: center;
+  }
+}
+@media (max-width: 819px) {
+  .container {
+    margin: 0 39px;
   }
 }

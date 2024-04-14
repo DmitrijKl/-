@@ -36,7 +36,15 @@
             <div class="form__field">
               <label class="label__vacation" for="job">Вакансия *</label>
               <select class="select__job _req" name="job" id="job">
-                <option selected value=""></option>
+                <option
+                  class="option__placeholder"
+                  value=""
+                  disabled
+                  selected
+                  hidden
+                >
+                  Выберите вакансию
+                </option>
                 <option value="value1">товаровед</option>
                 <option value="value2">водитель</option>
                 <option value="value3">пекарь</option>
@@ -117,7 +125,12 @@
                   <label class="label__email" for="email"
                     >Электронная почта</label
                   >
-                  <input class="email _req _email" id="email" type="email" />
+                  <input
+                    placeholder="example@mail.com"
+                    class="email _req _email"
+                    id="email"
+                    type="email"
+                  />
                   <p>поле заполнено не корректно</p>
                 </div>
               </div>

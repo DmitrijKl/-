@@ -18,7 +18,6 @@ var swiper = new Swiper(".mySwiperFirst", {
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: "4",
   spaceBetween: "30px",
-  // centeredSlides: true,
 
   pagination: {
     el: ".swiper-pagination",
@@ -26,8 +25,13 @@ var swiper = new Swiper(".mySwiper", {
   },
   breakpoints: {
     0: {
-      slidesPerView: 1.2,
-      spaceBetween: 0,
+      initialSlide: 0,
+      slidesPerView: 1.4,
+      spaceBetween: 30,
+      loop: true,
+      centeredSlides: true,
+      loopedSlides: 1,
+      loopAdditionalSlides: 2,
     },
     400: {
       slidesPerView: 2,
@@ -63,6 +67,10 @@ var swiper = new Swiper(".mySwiper", {
     },
     1900: {
       slidesPerView: 4,
+      spaceBetween: 30,
+    },
+    2300: {
+      slidesPerView: 5,
       spaceBetween: 30,
     },
   },

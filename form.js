@@ -329,7 +329,13 @@ inputCapcha.onclick = onClickFunction;
 inputRadio.onclick = onClickFunction;
 
 selectJob.addEventListener("focus", () => {
+  selectJob.style.color = "black";
+  selectJob.removeAttribute("disabled");
   formRemoveError(selectJob);
+});
+selectJob.addEventListener("", () => {
+  console.log("asds");
+  selectJob.removeAttribute("disabled");
 });
 inputRadio.forEach((element) => {
   return (element.onclick = onClickFunction);
