@@ -948,9 +948,15 @@ footer {
     top: 18px;
     z-index: 201;
   }
+  .sticky__container {
+    position: relative;
+  }
   .sticky__form {
     box-sizing: border-box;
     display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     background-color: #ffdf31;
     font-size: 18px;
