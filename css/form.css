@@ -290,10 +290,16 @@ select option {
   width: 100%;
 }
 .input__date {
+  appearance: none;
+  width: 100%;
   color: black;
   display: block;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
+}
+#input__date {
+  appearance: none;
+  width: 100%;
+  color: black;
+  display: block;
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
