@@ -289,6 +289,9 @@ select option {
 .form__date {
   width: 100%;
 }
+.input__date {
+  color: black;
+}
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
 }
@@ -439,6 +442,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 18px;
   padding: 12px 223px;
   border-radius: 8px;
+  color: black;
   margin-bottom: 72px;
 }
 
@@ -506,6 +510,7 @@ footer {
   font-weight: 500;
   transition: all 0.2s ease-out;
   margin: 0 auto;
+  color: black;
 }
 
 .footer__politics button:hover {

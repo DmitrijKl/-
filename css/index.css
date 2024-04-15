@@ -342,6 +342,7 @@ img {
   background-color: white;
   font-weight: 500;
   margin: 24px 0 0 24px;
+  color: black;
 }
 
 .job h2 {
@@ -399,6 +400,7 @@ img {
   font-weight: 500;
   padding: 12px 0;
   border-radius: 8px;
+  color: black;
 }
 main .mySwiper {
   margin-left: 165px;
@@ -471,6 +473,7 @@ main .swiper-wrapper {
   transform: scale(1.2);
 }
 .map__buttons button {
+  color: black;
   transition: all 0.3s ease-out;
 }
 .map__buttons button:hover {
@@ -544,7 +547,7 @@ footer {
   font-weight: 500;
   transition: all 0.2s ease-out;
   margin: 0 auto;
-  color: black !important;
+  color: black;
 }
 
 .footer__politics button:hover {
