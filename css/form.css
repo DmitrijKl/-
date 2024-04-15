@@ -294,6 +294,7 @@ select option {
   width: 100%;
   color: black;
   display: block;
+  height: 49px;
 }
 #input__date {
   appearance: none;

@@ -179,7 +179,10 @@ const labelDate = document.querySelector(".label__date");
 document.getElementById("date").onkeyup = function (event) {
   inputDateValid(event);
 };
-document.getElementById("date").onclick = function (event) {
+document.getElementById("date").onchange = function (event) {
+  inputDateValid(event);
+};
+document.getElementById("date").oninput = function (event) {
   inputDateValid(event);
 };
 let yearNow = new Date().getFullYear();
