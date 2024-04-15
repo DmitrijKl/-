@@ -291,6 +291,9 @@ select option {
 }
 .input__date {
   color: black;
+  display: block;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
