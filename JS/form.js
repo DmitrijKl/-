@@ -179,13 +179,17 @@ const labelDate = document.querySelector(".label__date");
 document.getElementById("date").onkeyup = function (event) {
   inputDateValid(event);
 };
+document.getElementById("date").onclick = function (event) {
+  inputDateValid(event);
+};
 let yearNow = new Date().getFullYear();
 function inputDateValid(event) {
   let yearInputDate = new Date(event.target.value).getFullYear();
 
   if (
-    (event.target.value.length =
-      10 && yearNow > yearInputDate && yearInputDate > 1960)
+    event.target.value.length >= 10 &&
+    yearNow > yearInputDate &&
+    yearInputDate > 1960
   ) {
     labelDate.classList.add("active__label");
     toggleActiveButton();
