@@ -270,7 +270,7 @@ function formValidate(form) {
     }
     if (input.getAttribute("id") === "date") {
       let yearInput = new Date(input.value).getFullYear();
-      if (input.value.length < 10 || yearNow < yearInput || yearInput < 1960) {
+      if (input.value.length < 10 || yearNow <= yearInput || yearInput < 1960) {
         formAddError(input);
         ++error;
       }
