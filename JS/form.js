@@ -232,6 +232,7 @@ async function sendForm(event) {
     mainBlock.classList.add("active");
     footer.classList.add("footer");
     localStorage.setItem("SendForm", true); //Если нужно
+    window.scrollTo(0, 0);
   }
 }
 function formValidate(form) {

@@ -127,6 +127,9 @@ header {
   font-size: 18px;
   background-color: #ffdf31;
 }
+.sticky__block {
+  display: none;
+}
 
 .greetings {
   background-color: #f5f5f5;
@@ -325,6 +328,11 @@ img {
   background-position: bottom;
   height: 85%;
   width: 100%;
+}
+.swiper__btn_prev,
+img {
+  z-index: 21;
+  position: relative;
 }
 
 .cart_job button {
@@ -934,6 +942,27 @@ footer {
 }
 
 @media (max-width: 700px) {
+  .sticky__block {
+    padding: 0 16px;
+    position: sticky;
+    top: 18px;
+    z-index: 201;
+  }
+  .sticky__form {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    background-color: #ffdf31;
+    font-size: 18px;
+    color: black;
+    padding: 12px 0;
+    text-align: center;
+    border-radius: 8px;
+    z-index: 201;
+  }
+  .sticky__block.active {
+    display: block;
+  }
   .footer__politics {
     flex-direction: column-reverse;
     gap: 24px;
@@ -1111,9 +1140,5 @@ footer {
   }
   main .mySwiper {
     margin: 0;
-  }
-  .swiper-slide {
-    /* display: flex; */
-    /* justify-content: center; */
   }
 }

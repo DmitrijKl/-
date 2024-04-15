@@ -81,6 +81,7 @@ var swiper = new Swiper(".mySwiper", {
   speed: 500,
 });
 
+// Работа с Yandex map
 const CATIGORIES_DATA = [
   {
     lat: 55.77767065455169,
@@ -226,6 +227,8 @@ function init() {
   map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
 }
 
+// Добавление или удаление доп grid секторов
+
 const btnGrid = document.querySelector(".toggle__btn");
 const gridContainer = document.querySelector(".grid");
 let buttonGridState = false;
@@ -277,6 +280,7 @@ btnGrid.addEventListener("click", function (e) {
   }
 });
 
+// Работа с модальным окном
 const btnCloseModal = document.querySelector(".btn__window_close");
 const btnOpenModal = document.querySelector(".modal__politics");
 const divModalWindow = document.querySelector(".popup");
@@ -314,5 +318,18 @@ const popupBody = document.querySelector(".popup__body");
 popupBody.addEventListener("click", (event) => {
   if (event.currentTarget === event.target) {
     divModalWindow.classList.toggle("active");
+  }
+});
+// Работа со sticky block
+const sectionJob = document.querySelector(".job");
+const stickyBlock = document.querySelector(".sticky__block");
+const heigthJob = sectionJob.offsetTop;
+console.log(heigthJob);
+window.addEventListener("scroll", () => {
+  const windowHeigth = window.scrollY;
+  if (windowHeigth > heigthJob) {
+    stickyBlock.classList.add("active");
+  } else {
+    stickyBlock.classList.remove("active");
   }
 });
