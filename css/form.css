@@ -553,7 +553,8 @@ footer {
 
 .popup__body {
   min-height: 100%;
-  padding: 72px 145px 72px 165px;
+  padding: 72px 145px 0 165px;
+  display: flex;
 }
 .popup__content {
   border-radius: 8px;
@@ -617,9 +618,6 @@ footer {
 .section__attention {
   margin-top: 20px;
   opacity: 0.5;
-}
-.section__content:last-child p {
-  padding-bottom: 72px;
 }
 
 .form__email ._error {

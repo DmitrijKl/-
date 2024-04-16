@@ -582,7 +582,8 @@ footer {
 }
 .popup__body {
   min-height: 100%;
-  padding: 72px 145px 72px 165px;
+  padding: 72px 145px 0 165px;
+  display: flex;
 }
 @keyframes popup {
   from {
@@ -597,6 +598,7 @@ footer {
   border-radius: 8px;
   background-color: white;
 }
+
 .popup__header {
   display: flex;
   align-items: center;
@@ -660,7 +662,10 @@ footer {
   opacity: 0.5;
 }
 .section__content:last-child p {
-  padding-bottom: 72px;
+  padding-bottom: 0;
+}
+.section__content:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 1432px) {
