@@ -839,7 +839,9 @@ main.active {
     margin-bottom: 0;
   }
   .footer {
-    position: static;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   .content__wait {
     max-width: 100%;
