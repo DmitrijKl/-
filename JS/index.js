@@ -26,7 +26,7 @@ var swiper = new Swiper(".mySwiper", {
   breakpoints: {
     0: {
       initialSlide: 0,
-      slidesPerView: 1.4,
+      slidesPerView: "auto",
       spaceBetween: 30,
       loop: true,
       centeredSlides: true,
