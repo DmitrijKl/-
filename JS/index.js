@@ -34,43 +34,43 @@ var swiper = new Swiper(".mySwiper", {
       loopAdditionalSlides: 2,
     },
     400: {
-      slidesPerView: 2,
+      slidesPerView: "auto",
       spaceBetween: 30,
     },
     600: {
-      slidesPerView: 2,
+      slidesPerView: "auto",
       spaceBetween: 30,
     },
     731: {
-      slidesPerView: 2,
+      slidesPerView: "auto",
       spaceBetween: 30,
     },
     746: {
-      slidesPerView: 2.5,
+      slidesPerView: "auto",
       spaceBetween: 30,
     },
     800: {
-      slidesPerView: 2.5,
+      slidesPerView: "auto",
       spaceBetween: 30,
     },
     1012: {
-      slidesPerView: 3,
+      slidesPerView: "auto",
       spaceBetween: 30,
     },
     1210: {
-      slidesPerView: 3.5,
+      slidesPerView: "auto",
       spaceBetween: 30,
     },
     1600: {
-      slidesPerView: 3.7,
+      slidesPerView: "auto",
       spaceBetween: 30,
     },
     1900: {
-      slidesPerView: 4,
+      slidesPerView: "auto",
       spaceBetween: 30,
     },
     2300: {
-      slidesPerView: 5,
+      slidesPerView: "auto",
       spaceBetween: 30,
     },
   },
