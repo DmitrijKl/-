@@ -570,7 +570,7 @@ footer {
 }
 
 .popup {
-  z-index: 99;
+  z-index: 2000;
   position: fixed;
   width: 100%;
   height: 100%;

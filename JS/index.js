@@ -324,7 +324,6 @@ popupBody.addEventListener("click", (event) => {
 const sectionJob = document.querySelector(".job");
 const stickyBlock = document.querySelector(".sticky__block");
 const heigthJob = sectionJob.offsetTop;
-console.log(heigthJob);
 window.addEventListener("scroll", () => {
   const windowHeigth = window.scrollY;
   if (windowHeigth > heigthJob) {
